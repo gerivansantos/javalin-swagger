@@ -1,0 +1,37 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.10'
+}
+
+group 'com.github.gerivansantos'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "org.slf4j:slf4j-api:1.7.25"
+    compile "org.slf4j:slf4j-simple:1.7.25"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+    compile 'io.javalin:javalin:2.4.0'
+    compile 'org.jetbrains.exposed:exposed:0.11.2'
+    compile 'org.koin:koin-core:1.0.2'
+    compile "org.webjars:swagger-ui:3.17.6"
+
+    compile group: 'io.swagger.parser.v3', name: 'swagger-parser', version: '2.0.7'
+    compile group: 'io.swagger.core.v3', name: 'swagger-jaxrs2', version: '2.0.6'
+    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0.1'
+    
+    testCompile 'org.koin:koin-test:1.0.2'
+
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
