@@ -1,3 +1,4 @@
+@file:JvmName("AppStart")
 package com.github.gerivansantos
 
 import com.github.gerivansantos.config.koin.KoinModuleConfig
@@ -57,8 +58,11 @@ class JavalinSwaggerApplication() : KoinComponent{
 
         return app
     }
+
 }
 
 fun main (args: Array<String>){
-   JavalinSwaggerApplication().init()
+    JavalinSwaggerApplication().init()
 }
+
+
